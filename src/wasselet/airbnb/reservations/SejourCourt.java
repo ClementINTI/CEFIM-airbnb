@@ -30,4 +30,16 @@ public class SejourCourt extends Sejour implements ConditionsTarifairesInterface
 		super.afficher();
 		System.out.println();
 	}
+
+	@Override
+	public boolean verificationNombreDeNuits() {
+		int nbNuits = getNbNuits();
+		return nbNuits > 0 && nbNuits < 32;
+	}
+
+	@Override
+	public void miseAJourDuTarif() {
+		// TODO Auto-generated method stub
+
+	}
 }

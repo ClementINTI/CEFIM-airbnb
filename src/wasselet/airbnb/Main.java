@@ -1,5 +1,7 @@
 package wasselet.airbnb;
 
+import java.util.Date;
+
 import wasselet.airbnb.logements.Appartement;
 import wasselet.airbnb.logements.Maison;
 import wasselet.airbnb.outils.MaDate;
@@ -47,14 +49,14 @@ public class Main {
 		Appartement logement4 = new Appartement(hote1, 10, "pouetpouet", 140, 6, 2, 3);
 		Appartement logement5 = new Appartement(hote1, 10, "rue des jolies près", 140, 6, 4, 4);
 
-		MaDate date1 = new MaDate(2, 12, 2021);
+		Date date1 = new MaDate(2, 12, 2021);
 
 		Sejour sejourLong = new SejourLong(date1, 5, logement1, 3);
 		Sejour sejourCourt = new SejourCourt(date1, 5, logement1, 3);
 
 		Reservation reservation = new Reservation(1, sejourCourt, voyageur);
 		Reservation reservation1 = new Reservation(1, sejourLong, voyageur);
-
+		System.out.println(sejourLong.verificationNombreDeNuits());
 		reservation.afficher();
 
 	}

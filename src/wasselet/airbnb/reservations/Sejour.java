@@ -12,13 +12,17 @@ public abstract class Sejour implements SejourInterface {
 	private int nbVoyageurs;
 	private int tarif;
 
+	public int getNbNuits() {
+		return nbNuits;
+	}
+
 	public Sejour(Date dateArrivee, int nbNuits, Logement logement, int nbVoyageurs) {
 		super();
 		this.dateArrivee = dateArrivee;
 		this.nbNuits = nbNuits;
 		this.logement = logement;
 		this.nbVoyageurs = nbVoyageurs;
-		this.tarif = logement.getTarifJournalier() * nbNuits * nbVoyageurs;
+		this.tarif = logement.getTarifJournalier() * nbNuits;
 	}
 
 	public int getTarif() {
@@ -41,14 +45,13 @@ public abstract class Sejour implements SejourInterface {
 	}
 
 	@Override
-	public boolean verificationNombreDeNuits() {
-
-		return nbNuits > 0 && nbNuits < 32;
-	}
+	public abstract boolean verificationNombreDeNuits();
 
 	@Override
 	public boolean verificationNombreDeVoyageurs() {
 
 		return nbVoyageurs > 0 && nbVoyageurs <= logement.getNbVoyageursmax();
 	}
+
+	public abstract void miseAJourDuTarif();
 }

@@ -33,4 +33,16 @@ public class SejourLong extends Sejour implements ConditionsTarifairesInterface 
 
 		System.out.println(" (" + promotion + " euros de promotion).");
 	}
+
+	@Override
+	public boolean verificationNombreDeNuits() {
+		int nbNuits = getNbNuits();
+		return nbNuits > 0 && nbNuits < 32;
+	}
+
+	@Override
+	public void miseAJourDuTarif() {
+		// TODO Auto-generated method stub
+
+	}
 }

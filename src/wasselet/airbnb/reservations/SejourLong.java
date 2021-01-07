@@ -21,12 +21,6 @@ public class SejourLong extends Sejour implements ConditionsTarifairesInterface 
 	}
 
 	@Override
-	public int getTarif() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
 	public void afficher() {
 		// TODO Auto-generated method stub
 		super.afficher();

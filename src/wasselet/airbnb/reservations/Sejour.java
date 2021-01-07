@@ -46,9 +46,6 @@ public abstract class Sejour implements SejourInterface {
 	}
 
 	@Override
-	public abstract boolean verificationNombreDeNuits();
-
-	@Override
 	public boolean verificationNombreDeVoyageurs() {
 
 		return nbVoyageurs > 0 && nbVoyageurs <= logement.getNbVoyageursmax();

@@ -49,9 +49,8 @@ public class Main {
 
 		MaDate date1 = new MaDate(2, 12, 2021);
 
-		Sejour sejour = new Sejour(date1, 5, logement1, 3);
-		SejourLong sejourLong = new SejourLong(date1, 5, logement1, 3, 100);
-		SejourCourt sejourCourt = new SejourCourt(date1, 5, logement1, 3, 150);
+		Sejour sejourLong = new SejourLong(date1, 5, logement1, 3);
+		Sejour sejourCourt = new SejourCourt(date1, 5, logement1, 3);
 
 		Reservation reservation = new Reservation(1, sejourCourt, voyageur);
 		Reservation reservation1 = new Reservation(1, sejourLong, voyageur);

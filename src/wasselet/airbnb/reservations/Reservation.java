@@ -21,9 +21,10 @@ public class Reservation {
 	}
 
 	public void afficher() {
-		if (sejour.getClass() == SejourLong.class) {
+		boolean sejourLong = sejour.getClass() == SejourLong.class;
+		if (sejourLong) {
 			System.out.println("Bienvenue chez airbnb");
-
+			System.out.println("Réservation n°1");
 		}
 		voyageur.afficher();
 		System.out.print(" a fait une réservation chez ");

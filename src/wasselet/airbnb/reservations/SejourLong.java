@@ -43,6 +43,7 @@ public class SejourLong extends Sejour implements ConditionsTarifairesInterface 
 	@Override
 	public void miseAJourDuTarif() {
 		// TODO Auto-generated method stub
+		tarif = getLogement().getTarifJournalier() * getNbNuits();
 
 	}
 }

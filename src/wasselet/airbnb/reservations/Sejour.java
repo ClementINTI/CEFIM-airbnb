@@ -10,7 +10,7 @@ public abstract class Sejour implements SejourInterface {
 	private int nbNuits;
 	private Logement logement;
 	private int nbVoyageurs;
-	private int tarif;
+	protected int tarif;
 
 	public int getNbNuits() {
 		return nbNuits;
@@ -22,7 +22,8 @@ public abstract class Sejour implements SejourInterface {
 		this.nbNuits = nbNuits;
 		this.logement = logement;
 		this.nbVoyageurs = nbVoyageurs;
-		this.tarif = logement.getTarifJournalier() * nbNuits;
+		miseAJourDuTarif();
+		// this.tarif = logement.getTarifJournalier() * nbNuits;
 	}
 
 	public int getTarif() {
@@ -54,4 +55,9 @@ public abstract class Sejour implements SejourInterface {
 	}
 
 	public abstract void miseAJourDuTarif();
+
+	public Logement getLogement() {
+		return logement;
+	}
+
 }

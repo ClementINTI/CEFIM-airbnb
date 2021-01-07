@@ -5,11 +5,9 @@ import java.util.Date;
 import wasselet.airbnb.logements.Logement;
 
 public class SejourCourt extends Sejour implements ConditionsTarifairesInterface {
-	private int tarif;
 
 	public SejourCourt(Date dateArrivee, int nbNuits, Logement logement, int nbVoyageurs) {
 		super(dateArrivee, nbNuits, logement, nbVoyageurs);
-		this.tarif = logement.getTarifJournalier() * nbNuits * nbVoyageurs;
 	}
 
 	@Override
@@ -40,6 +38,7 @@ public class SejourCourt extends Sejour implements ConditionsTarifairesInterface
 	@Override
 	public void miseAJourDuTarif() {
 		// TODO Auto-generated method stub
+		tarif = getLogement().getTarifJournalier() * getNbNuits();
 
 	}
 }

@@ -15,19 +15,21 @@ public class Reservation {
 		if (!sejour.verificationDateArrivee()) {
 			throw new Exception("Date d'arrivée non valide");
 		}
+
 		if (!sejour.verificationNombreDeNuits()) {
 			throw new Exception("Nombre de nuit non valide");
-
 		}
-		if (!sejour.verificationNombreDeNuits()) {
-			throw new Exception("Nombre de nuit non valide");
 
+		if (!sejour.verificationNombreDeVoyageurs()) {
+			throw new Exception("Nombre de voyageur non valide");
 		}
+
 		this.identifiant = identifiant;
 		this.sejour = sejour;
 		this.voyageur = voyageur;
 		this.estValidee = false;
 		this.dateDeReservation = new Date();
+
 	}
 
 	public void afficher() {

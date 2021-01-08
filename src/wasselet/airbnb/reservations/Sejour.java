@@ -40,7 +40,7 @@ public abstract class Sejour implements SejourInterface {
 	}
 
 	@Override
-	public boolean VerificationDateArrivee() {
+	public boolean verificationDateArrivee() {
 
 		return dateArrivee.after(new Date());
 	}

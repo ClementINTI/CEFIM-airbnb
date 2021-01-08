@@ -11,8 +11,18 @@ public class Reservation {
 	private boolean estValidee;
 	private Date dateDeReservation;
 
-	public Reservation(int identifiant, Sejour sejour, Voyageur voyageur) {
-		super();
+	public Reservation(int identifiant, Sejour sejour, Voyageur voyageur) throws Exception {
+		if (!sejour.verificationDateArrivee()) {
+			throw new Exception("Date d'arrivée non valide");
+		}
+		if (!sejour.verificationNombreDeNuits()) {
+			throw new Exception("Nombre de nuit non valide");
+
+		}
+		if (!sejour.verificationNombreDeNuits()) {
+			throw new Exception("Nombre de nuit non valide");
+
+		}
 		this.identifiant = identifiant;
 		this.sejour = sejour;
 		this.voyageur = voyageur;

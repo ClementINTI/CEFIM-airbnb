@@ -2,7 +2,7 @@ package wasselet.airbnb.reservations;
 
 public interface SejourInterface {
 
-	public boolean VerificationDateArrivee();
+	public boolean verificationDateArrivee();
 
 	public boolean verificationNombreDeNuits();
 

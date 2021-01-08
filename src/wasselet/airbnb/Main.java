@@ -5,7 +5,6 @@ import java.util.Date;
 import wasselet.airbnb.logements.Appartement;
 import wasselet.airbnb.logements.Maison;
 import wasselet.airbnb.outils.MaDate;
-import wasselet.airbnb.reservations.Reservation;
 import wasselet.airbnb.reservations.Sejour;
 import wasselet.airbnb.reservations.SejourCourt;
 import wasselet.airbnb.reservations.SejourLong;
@@ -44,17 +43,17 @@ public class Main {
 		Sejour sejourLong = new SejourLong(date1, 5, maison1, 3);
 		Sejour sejourCourt = new SejourCourt(date1, 5, maison1, 3);
 
-		Reservation reservation1 = new Reservation(1, sejourCourt, voyageur1);
-		Reservation reservation2 = new Reservation(1, sejourLong, voyageur1);
+		// Reservation reservation1 = new Reservation(1, sejourCourt, voyageur1);
+		// Reservation reservation2 = new Reservation(1, sejourLong, voyageur1);
 
 		System.out
 				.println("----------------------------  1 / voyageur1 / sejourtCourt  ------------------------------");
 		System.out.println();
-		reservation1.afficher();
+		// reservation1.afficher();
 
 		System.out.println("----------------------------  2 / voyageur1 / sejourtLong  ------------------------------");
 		System.out.println();
-		reservation2.afficher();
+		// reservation2.afficher();
 
 	}
 
